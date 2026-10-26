@@ -162,7 +162,7 @@ class MoveKit_REST {
 					),
 					'remote_media' => array(
 						'type'    => 'boolean',
-						'default' => true,
+						'default' => false,
 					),
 				),
 			)

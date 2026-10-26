@@ -4,7 +4,7 @@ Tags: migration, backup, restore, clone, move
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.10.1
+Stable tag: 0.10.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -31,7 +31,7 @@ Connect two sites once, then copy one over the other with a single click, withou
 
 = Skip your media library on local sites =
 
-Pull without Media and MoveKit shows the live site's images on your local site, straight from the live site. Nothing is downloaded, so a 20 GB uploads folder never has to be copied just to develop a theme. Missing files only: anything that exists locally is used as before. Stop it any time from the notice at the top of the MoveKit screen, or untick "Show missing media from the other site" before the pull.
+Pull without Media and, if you tick "Show missing media from the other site" first, MoveKit shows the live site's images on your local site, straight from the live site. It is off unless you tick it. Nothing is downloaded, so a 20 GB uploads folder never has to be copied just to develop a theme. Missing files only: anything that exists locally is used as before. Stop it any time from the notice at the top of the MoveKit screen.
 
 = Move only what you need =
 
@@ -122,7 +122,11 @@ They are kept. To delete them along with the plugin, add `define( 'MOVEKIT_DELET
 
 = Does MoveKit send data anywhere? =
 
-Only to sites you connect yourself. Push and pull talk directly to the other site whose key you pasted; nothing goes to any third-party service, and MoveKit makes no other external requests.
+Only to sites you connect yourself. Push and pull talk directly to the other site whose key you pasted; nothing goes to any third-party service, MoveKit collects no user data, and it makes no other external requests. The one exception is a choice you make: if you tick "Show missing media from the other site" on a pull, your visitors' browsers load missing images from that site's uploads folder until you click Stop.
+
+= Where is the source code? =
+
+Everything in the plugin is readable source with no build step. The development repository is at https://github.com/shiblucu/movekit-migration-backup, where you can also report issues.
 
 = Is the connection key safe to share? =
 
@@ -174,6 +178,9 @@ MoveKit verifies HTTPS certificates. For local sites with self-signed certificat
 
 == Changelog ==
 
+= 0.10.2 =
+* "Show missing media from the other site" is now off unless you tick it, because it makes visitors' browsers load images from the other site. The privacy answer and a link to the source code are in the readme.
+
 = 0.10.1 =
 * Fixed MySQL and MariaDB BIT columns, which were copied with a wrong value.
 * Tables of another WordPress site in the same database (for example a `wp_shop_` site next to `wp_`) are no longer included in a backup of the `wp_` site.
@@ -181,7 +188,7 @@ MoveKit verifies HTTPS certificates. For local sites with self-signed certificat
 * Leftover temporary tables and old copies are removed automatically when no restore is running and nothing can be undone.
 
 = 0.10.0 =
-* Pull without Media and the local site shows missing images from the live site instead of copying them. WP-CLI: `wp movekit pull <site> --only=database,themes --skip-remote-media` turns it off.
+* Pull without Media and, if you choose to, the local site shows missing images from the live site instead of copying them. WP-CLI: add `--remote-media` to a pull.
 * Security: backups are now saved readable only by the web server account, and their file names and the undo folder name are longer so they cannot be guessed.
 * Security: a damaged or hostile backup can no longer make MoveKit read a huge record into memory.
 * Security: downloads send `X-Content-Type-Options: nosniff`.

@@ -3,7 +3,7 @@
  * Plugin Name:       MoveKit – Site Migration & Backup
  * Plugin URI:        https://github.com/shiblucu/movekit-migration-backup
  * Description:       Reliable full-site backup, restore and migration between local and live WordPress sites, built for large sites.
- * Version:           0.10.1
+ * Version:           0.10.2
  * Requires at least: 5.6
  * Requires PHP:      7.4
  * Author:            Tawfiqur Rahman
@@ -18,7 +18,7 @@
 
 defined( 'ABSPATH' ) || exit;
 
-define( 'MOVEKIT_VERSION', '0.10.1' );
+define( 'MOVEKIT_VERSION', '0.10.2' );
 define( 'MOVEKIT_FILE', __FILE__ );
 define( 'MOVEKIT_DIR', __DIR__ );
 define( 'MOVEKIT_BASENAME', plugin_basename( __FILE__ ) );

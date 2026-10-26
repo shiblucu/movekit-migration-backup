@@ -236,8 +236,8 @@ class MoveKit_CLI {
 	 * [--all-files]
 	 * : Send every file, even the ones that are already the same on both sites.
 	 *
-	 * [--skip-remote-media]
-	 * : When media is left out, don't show it from the other site.
+	 * [--remote-media]
+	 * : When media is left out, show it from the other site instead of leaving images missing.
 	 *
 	 * [--yes]
 	 * : Skip the confirmation.
@@ -249,7 +249,7 @@ class MoveKit_CLI {
 		$this->drive(
 			$this->start(
 				function () use ( $remote, $parts, $assoc ) {
-					return MoveKit_Transfer_Job::start( $remote['id'], 'pull', $parts, $this->exclude( $assoc ), empty( $assoc['all-files'] ), empty( $assoc['skip-remote-media'] ) );
+					return MoveKit_Transfer_Job::start( $remote['id'], 'pull', $parts, $this->exclude( $assoc ), empty( $assoc['all-files'] ), ! empty( $assoc['remote-media'] ) );
 				}
 			)
 		);

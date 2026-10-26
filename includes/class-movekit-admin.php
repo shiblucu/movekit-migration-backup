@@ -249,8 +249,8 @@ class MoveKit_Admin {
 				<span class="description"><?php esc_html_e( 'Files that are already the same on both sites are left out, so a second push or pull is much faster. The database is always sent in full.', 'movekit-migration-backup' ); ?></span>
 			</p>
 			<p class="movekit-changed">
-				<label><input type="checkbox" id="movekit-remote-media" checked> <?php esc_html_e( 'Show missing media from the other site', 'movekit-migration-backup' ); ?></label>
-				<span class="description"><?php esc_html_e( 'When you pull without Media, uploads are not copied. Instead this site shows them from the other site, so images still appear and nothing is downloaded.', 'movekit-migration-backup' ); ?></span>
+				<label><input type="checkbox" id="movekit-remote-media"> <?php esc_html_e( 'Show missing media from the other site', 'movekit-migration-backup' ); ?></label>
+				<span class="description"><?php esc_html_e( 'When you pull without Media, uploads are not copied. Instead this site shows them from the other site, so images still appear and nothing is downloaded. The browsers of your visitors then load those images from the other site.', 'movekit-migration-backup' ); ?></span>
 			</p>
 			<p class="description"><?php esc_html_e( 'Push replaces the other site with this one. Pull replaces this site with the other one. Each site keeps its own address, connection keys survive the transfer, and the replaced site can be put back with Undo for a day.', 'movekit-migration-backup' ); ?></p>
 		</div>

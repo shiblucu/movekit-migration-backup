@@ -35,7 +35,7 @@ class MoveKit_Transfer_Job extends MoveKit_Job {
 	 * @return MoveKit_Transfer_Job
 	 * @throws MoveKit_Exception When the site isn't connected or this site is multisite.
 	 */
-	public static function start( $remote_id, $direction, $parts = null, $exclude = null, $changed = true, $media = true ) {
+	public static function start( $remote_id, $direction, $parts = null, $exclude = null, $changed = true, $media = false ) {
 		$remote = MoveKit_Connection::remote( $remote_id );
 		if ( is_multisite() ) {
 			throw new MoveKit_Exception( esc_html__( 'Multisite networks are not supported yet.', 'movekit-migration-backup' ) );
