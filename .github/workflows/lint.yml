@@ -1,0 +1,24 @@
+name: Lint
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+      - name: Install WordPress Coding Standards
+        run: |
+          composer global config allow-plugins.dealerdirect/phpcodesniffer-composer-installer true
+          composer global require --dev wp-coding-standards/wpcs:^3.0 phpcompatibility/phpcompatibility-wp:^2.1 dealerdirect/phpcodesniffer-composer-installer
+          echo "$(composer global config bin-dir --absolute)" >> "$GITHUB_PATH"
+      - name: Check coding standards
+        run: phpcs
+      - name: Check JavaScript syntax
+        run: node --check assets/admin.js

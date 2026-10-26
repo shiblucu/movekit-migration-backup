@@ -1,0 +1,1534 @@
+# Copyright (C) 2026 Tawfiqur Rahman
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: MoveKit – Site Migration & Backup 0.10.1\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/movekit-migration-backup\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-26T16:23:23+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: movekit-migration-backup\n"
+
+#. Plugin Name of the plugin
+#: movekit-migration-backup.php
+msgid "MoveKit – Site Migration & Backup"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: movekit-migration-backup.php
+msgid "https://github.com/shiblucu/movekit-migration-backup"
+msgstr ""
+
+#. Description of the plugin
+#: movekit-migration-backup.php
+msgid "Reliable full-site backup, restore and migration between local and live WordPress sites, built for large sites."
+msgstr ""
+
+#. Author of the plugin
+#: movekit-migration-backup.php
+msgid "Tawfiqur Rahman"
+msgstr ""
+
+#. Author URI of the plugin
+#: movekit-migration-backup.php
+msgid "https://tawfiq.me"
+msgstr ""
+
+#: includes/class-movekit-admin.php:52
+#: includes/class-movekit-admin.php:184
+msgid "Backups"
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-admin.php:116
+#, php-format
+msgid "Images and other uploads that are missing on this site are shown from %s. Nothing is downloaded."
+msgstr ""
+
+#: includes/class-movekit-admin.php:120
+msgid "Stop"
+msgstr ""
+
+#: includes/class-movekit-admin.php:126
+msgid "Two ways to move a site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:128
+msgid "With a backup file: create a backup here and download it. On the other site, install MoveKit, upload the file and click Restore."
+msgstr ""
+
+#: includes/class-movekit-admin.php:129
+msgid "Directly: install MoveKit on the live site and copy its connection key. Paste the key under Connect a site on your local site, then click Push or Pull."
+msgstr ""
+
+#: includes/class-movekit-admin.php:131
+msgid "Either way, the site that receives the copy keeps its own address, and the site it replaces can be put back with Undo for a day."
+msgstr ""
+
+#: includes/class-movekit-admin.php:135
+msgid "What to include"
+msgstr ""
+
+#: includes/class-movekit-admin.php:139
+msgid "Select all"
+msgstr ""
+
+#: includes/class-movekit-admin.php:140
+msgid "Applies to backups, push and pull. Other files are everything else in wp-content, such as mu-plugins and languages."
+msgstr ""
+
+#: includes/class-movekit-admin.php:142
+msgid "Skip files"
+msgstr ""
+
+#: includes/class-movekit-admin.php:143
+msgid "Files and folders to leave out, one per line:"
+msgstr ""
+
+#: includes/class-movekit-admin.php:145
+msgid "A name such as *.zip or old-theme is skipped wherever it appears. A path such as uploads/2019 is counted from wp-content. Saved for next time. Caches, other backup plugins' folders, .git and node_modules are always skipped."
+msgstr ""
+
+#: includes/class-movekit-admin.php:151
+msgid "Back up this site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:152
+msgid "Saves what is selected under What to include into one file you can download or restore on another site."
+msgstr ""
+
+#: includes/class-movekit-admin.php:153
+#: assets/admin.js:1172
+msgid "Create backup"
+msgstr ""
+
+#: includes/class-movekit-admin.php:156
+msgid "Upload a backup"
+msgstr ""
+
+#. translators: %s: file extension.
+#: includes/class-movekit-admin.php:161
+#, php-format
+msgid "Add a %s file from another site. Large files are sent in pieces, so upload limits don't matter."
+msgstr ""
+
+#: includes/class-movekit-admin.php:166
+msgid "Choose file"
+msgstr ""
+
+#: includes/class-movekit-admin.php:178
+msgid "Keep this page open until it finishes. If it closes, open MoveKit again and it carries on."
+msgstr ""
+
+#: includes/class-movekit-admin.php:188
+msgid "File"
+msgstr ""
+
+#: includes/class-movekit-admin.php:189
+msgid "From site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:190
+msgid "Size"
+msgstr ""
+
+#: includes/class-movekit-admin.php:191
+msgid "Created"
+msgstr ""
+
+#: includes/class-movekit-admin.php:192
+#: includes/class-movekit-admin.php:242
+msgid "Actions"
+msgstr ""
+
+#: includes/class-movekit-admin.php:195
+#: includes/class-movekit-admin.php:245
+msgid "Loading…"
+msgstr ""
+
+#. translators: %s: folder where backups are stored.
+#: includes/class-movekit-admin.php:201
+#, php-format
+msgid "Stored in %s. Restoring replaces this site's database and wp-content files; wp-config.php and WordPress core are kept. What was replaced is kept for a day, so you can undo the restore."
+msgstr ""
+
+#: includes/class-movekit-admin.php:207
+msgid "Push and pull"
+msgstr ""
+
+#: includes/class-movekit-admin.php:208
+msgid "Copy a site straight to or from another site that has MoveKit, without downloading files. Connect from the site that starts the transfer, usually your local site."
+msgstr ""
+
+#: includes/class-movekit-admin.php:211
+msgid "Connect a site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:212
+msgid "Paste the connection key from the MoveKit screen of the other site."
+msgstr ""
+
+#: includes/class-movekit-admin.php:214
+msgid "Connection key"
+msgstr ""
+
+#: includes/class-movekit-admin.php:216
+msgid "Connect"
+msgstr ""
+
+#: includes/class-movekit-admin.php:220
+#: includes/class-movekit-admin.php:226
+msgid "This site's connection key"
+msgstr ""
+
+#: includes/class-movekit-admin.php:221
+msgid "Paste this into another site to let it push to or pull from this site. Anyone with the key can replace or copy this site, so keep it private."
+msgstr ""
+
+#: includes/class-movekit-admin.php:223
+msgid "This is a local site, which a live site cannot reach. To move it, paste the live site's key under Connect a site here instead."
+msgstr ""
+
+#: includes/class-movekit-admin.php:228
+#: assets/admin.js:1140
+msgid "Show"
+msgstr ""
+
+#: includes/class-movekit-admin.php:229
+#: assets/admin.js:1116
+msgid "Copy"
+msgstr ""
+
+#: includes/class-movekit-admin.php:232
+msgid "Regenerate key"
+msgstr ""
+
+#: includes/class-movekit-admin.php:240
+msgid "Connected site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:241
+msgid "Connected on"
+msgstr ""
+
+#: includes/class-movekit-admin.php:248
+msgid "Send only files that changed"
+msgstr ""
+
+#: includes/class-movekit-admin.php:249
+msgid "Files that are already the same on both sites are left out, so a second push or pull is much faster. The database is always sent in full."
+msgstr ""
+
+#: includes/class-movekit-admin.php:252
+msgid "Show missing media from the other site"
+msgstr ""
+
+#: includes/class-movekit-admin.php:253
+msgid "When you pull without Media, uploads are not copied. Instead this site shows them from the other site, so images still appear and nothing is downloaded."
+msgstr ""
+
+#: includes/class-movekit-admin.php:255
+msgid "Push replaces the other site with this one. Pull replaces this site with the other one. Each site keeps its own address, connection keys survive the transfer, and the replaced site can be put back with Undo for a day."
+msgstr ""
+
+#: includes/class-movekit-admin.php:265
+msgid "Sorry, you are not allowed to download backups."
+msgstr ""
+
+#: includes/class-movekit-admin.php:275
+#: includes/class-movekit-remote-api.php:264
+msgid "Backup not found."
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-archive-reader.php:26
+#, php-format
+msgid "Could not open backup file %s"
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:30
+msgid "This is not a MoveKit backup file."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:45
+msgid "The backup file is incomplete (too small)."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:50
+msgid "The backup file is incomplete: it was cut off before the end. Download or upload it again."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:54
+#: includes/class-movekit-archive-reader.php:58
+msgid "The backup file is damaged (missing end marker)."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:62
+msgid "The backup file is damaged (unreadable end marker)."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:72
+msgid "The backup file is damaged (missing manifest)."
+msgstr ""
+
+#: includes/class-movekit-archive-reader.php:76
+msgid "The backup file is damaged (unreadable manifest)."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:88
+#, php-format
+msgid "The backup file is damaged: unexpected end at byte %d."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:94
+#, php-format
+msgid "The backup file is damaged at byte %d."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:99
+#, php-format
+msgid "The backup file is damaged at byte %d (header checksum)."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:104
+#, php-format
+msgid "The backup file is damaged at byte %d (record too large)."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:108
+#, php-format
+msgid "The backup file is damaged: \"%s\" is cut off."
+msgstr ""
+
+#. translators: Placeholders: byte offset or file path, and details.
+#: includes/class-movekit-archive-reader.php:121
+#, php-format
+msgid "The backup file is damaged: \"%s\" failed its checksum."
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-archive-writer.php:29
+#, php-format
+msgid "Could not create backup file %s"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-archive-writer.php:35
+#, php-format
+msgid "Could not reopen backup file %s"
+msgstr ""
+
+#: includes/class-movekit-archive-writer.php:88
+msgid "Writing the backup failed. The disk may be full."
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-archive.php:47
+#, php-format
+msgid "Path too long: %s"
+msgstr ""
+
+#: includes/class-movekit-connection.php:80
+msgid "That is not a MoveKit connection key. Copy it from the MoveKit screen on the other site."
+msgstr ""
+
+#: includes/class-movekit-connection.php:88
+#: includes/class-movekit-connection.php:109
+msgid "The connection key is incomplete. Copy the whole key again."
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-connection.php:139
+#, php-format
+msgid "%s does not use https, so the transfer could be read or changed by others on the network. Turn on SSL for that site, then copy its connection key again."
+msgstr ""
+
+#: includes/class-movekit-connection.php:156
+msgid "That is this site's own key. Paste the key from the other site."
+msgstr ""
+
+#: includes/class-movekit-connection.php:160
+msgid "That key belongs to a local site, which this server can't reach. Copy this site's connection key instead, and paste it into MoveKit on your local site."
+msgstr ""
+
+#: includes/class-movekit-connection.php:208
+msgid "That connected site was removed."
+msgstr ""
+
+#. translators: 1: site address, 2: technical reason.
+#: includes/class-movekit-connection.php:308
+#, php-format
+msgid "The connection key was not accepted. Copy the current key from %1$s and connect again. (%2$s)"
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-connection.php:320
+#, php-format
+msgid "The request reached %s without its MoveKit signature. A proxy, cache or security plugin in front of that site removed it. Ask the host to pass requests to /wp-json/movekit/ through unchanged."
+msgstr ""
+
+#: includes/class-movekit-connection.php:327
+msgid "The two sites' clocks are more than 10 minutes apart. Check the date and time on both computers."
+msgstr ""
+
+#: includes/class-movekit-connection.php:331
+msgid "signature mismatch"
+msgstr ""
+
+#. translators: 1: site address, 2: error.
+#: includes/class-movekit-connection.php:340
+#, php-format
+msgid "MoveKit on %1$s could not record the request in its database: %2$s"
+msgstr ""
+
+#: includes/class-movekit-connection.php:348
+msgid "request received twice"
+msgstr ""
+
+#. translators: 1: file path, 2: PHP error message.
+#: includes/class-movekit-connection.php:451
+#, php-format
+msgid "Could not save %1$s: %2$s"
+msgstr ""
+
+#: includes/class-movekit-connection.php:453
+msgid "unknown error"
+msgstr ""
+
+#: includes/class-movekit-db-exporter.php:47
+msgid "Could not write the database export file."
+msgstr ""
+
+#: includes/class-movekit-db-exporter.php:187
+msgid "Writing the database export failed. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-db.php:23
+msgid "MoveKit needs the mysqli database driver."
+msgstr ""
+
+#. translators: 1: database error, 2: start of the query.
+#: includes/class-movekit-db.php:45
+#: includes/class-movekit-db.php:77
+#: includes/class-movekit-db.php:89
+#, php-format
+msgid "Database error: %1$s (in: %2$s)"
+msgstr ""
+
+#. translators: 1: size of the data, 2: size to raise the limit to.
+#: includes/class-movekit-db.php:230
+#, php-format
+msgid "The database on this site refused a row of about %1$s because it is bigger than its max_allowed_packet setting. Raise max_allowed_packet to at least %2$s in the MySQL or MariaDB settings (ask your host if you cannot), then try again."
+msgstr ""
+
+#. translators: 1: size of the data, 2: the database's current limit, 3: size to raise the limit to.
+#: includes/class-movekit-db.php:237
+#, php-format
+msgid "The database on this site refused a row of about %1$s because it is bigger than its max_allowed_packet setting (%2$s). Raise max_allowed_packet to at least %3$s in the MySQL or MariaDB settings (ask your host if you cannot), then try again."
+msgstr ""
+
+#: includes/class-movekit-export-job.php:24
+#: includes/class-movekit-import-job.php:44
+#: includes/class-movekit-transfer-job.php:41
+msgid "Multisite networks are not supported yet."
+msgstr ""
+
+#: includes/class-movekit-export-job.php:39
+msgid "Could not save the list of files to compare."
+msgstr ""
+
+#: includes/class-movekit-export-job.php:66
+msgid "Scanning files"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-export-job.php:71
+#, php-format
+msgid "No database tables found for prefix %s"
+msgstr ""
+
+#. translators: %s: path relative to wp-content.
+#: includes/class-movekit-export-job.php:79
+#, php-format
+msgid "Skipped a file or folder that could not be read: %s"
+msgstr ""
+
+#. translators: %s: path relative to wp-content.
+#: includes/class-movekit-export-job.php:83
+#, php-format
+msgid "Included %s, a symlinked folder, as a normal folder."
+msgstr ""
+
+#: includes/class-movekit-export-job.php:127
+msgid "Exporting database"
+msgstr ""
+
+#: includes/class-movekit-export-job.php:127
+#: includes/class-movekit-export-job.php:163
+msgid "Adding files to backup"
+msgstr ""
+
+#: includes/class-movekit-export-job.php:139
+msgid "Adding database to backup"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-export-job.php:191
+#, php-format
+msgid "Skipped file that disappeared or became unreadable: %s"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-export-job.php:207
+#, php-format
+msgid "File changed while being backed up: %s"
+msgstr ""
+
+#: includes/class-movekit-export-job.php:227
+msgid "Finishing backup"
+msgstr ""
+
+#: includes/class-movekit-export-job.php:244
+msgid "Could not finalize the backup file."
+msgstr ""
+
+#: includes/class-movekit-export-job.php:260
+msgid "Backup complete"
+msgstr ""
+
+#: includes/class-movekit-file-scanner.php:241
+msgid "Could not write the file list."
+msgstr ""
+
+#: includes/class-movekit-file-scanner.php:338
+msgid "Could not write the file list. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:41
+msgid "Backup file not found."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:91
+#: includes/class-movekit-import-job.php:191
+msgid "Backups of multisite networks are not supported yet."
+msgstr ""
+
+#. translators: 1: WordPress version of the source site, 2: destination site address, 3: its WordPress version.
+#: includes/class-movekit-import-job.php:125
+#, php-format
+msgid "The copy comes from WordPress %1$s, but %2$s runs WordPress %3$s. Update WordPress there first, or the restored site may ask for a database update."
+msgstr ""
+
+#. translators: 1: PHP version of the source site, 2: destination site address, 3: its PHP version.
+#: includes/class-movekit-import-job.php:134
+#, php-format
+msgid "The copy comes from a server with PHP %1$s, but %2$s runs PHP %3$s. Plugins or themes that need the newer PHP may stop working there. Upgrade PHP on that server first if you can."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:182
+msgid "Checking backup file"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:188
+msgid "This backup was made by a newer version of MoveKit. Update the plugin and try again."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:205
+msgid "The backup file is damaged: its contents do not match its index."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:209
+msgid "Unpacking database"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:232
+msgid "Unpacking the database failed. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:243
+msgid "Importing database"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:272
+msgid "The backup contains no database tables."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:277
+msgid "Updating URLs and paths"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-import-job.php:287
+#: includes/class-movekit-import-job.php:296
+#, php-format
+msgid "Unexpected statement in the backup database: %s"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-import-job.php:350
+#, php-format
+msgid "Unexpected table in backup: %s"
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-import-job.php:355
+#, php-format
+msgid "Table name too long to restore safely: %s"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:466
+msgid "Restoring files"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:487
+msgid "The copy asked search engines not to index the site. This live site kept its setting, so search engines can still index it. Change it under Settings, Reading."
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-import-job.php:636
+#, php-format
+msgid "Skipped unsafe path in backup: %s"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:656
+msgid "Switching to the restored site"
+msgstr ""
+
+#: includes/class-movekit-import-job.php:677
+#: includes/class-movekit-undo.php:181
+msgid "Could not record restored files. The disk may be full."
+msgstr ""
+
+#. translators: %s: folder path.
+#: includes/class-movekit-import-job.php:724
+#: includes/class-movekit-import-job.php:769
+#, php-format
+msgid "Could not create folder %s"
+msgstr ""
+
+#. translators: %s: file path.
+#: includes/class-movekit-import-job.php:730
+#: includes/class-movekit-import-job.php:736
+#, php-format
+msgid "Could not replace %s. Check folder permissions."
+msgstr ""
+
+#. translators: %d: number of files.
+#: includes/class-movekit-import-job.php:756
+#, php-format
+msgid "%d replaced file could not be put back. It is in the movekit-backups folder."
+msgid_plural "%d replaced files could not be put back. They are in the movekit-backups folder."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: file path.
+#: includes/class-movekit-import-job.php:776
+#, php-format
+msgid "Could not write %s. Check folder permissions."
+msgstr ""
+
+#. translators: %s: file path.
+#: includes/class-movekit-import-job.php:781
+#, php-format
+msgid "Writing %s failed. The disk may be full."
+msgstr ""
+
+#. translators: 1: constraint name, 2: table name.
+#: includes/class-movekit-import-job.php:959
+#, php-format
+msgid "The foreign key %1$s on table %2$s kept a temporary name. The site works the same."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:1038
+msgid "Restore complete. Log in with the username and password from the site you restored."
+msgstr ""
+
+#: includes/class-movekit-import-job.php:1039
+#: assets/admin.js:393
+#: assets/admin.js:398
+msgid "Restore complete."
+msgstr ""
+
+#. translators: %s: detail.
+#: includes/class-movekit-job.php:44
+#, php-format
+msgid "Could not create a working folder in %s"
+msgstr ""
+
+#: includes/class-movekit-job.php:69
+msgid "Invalid job."
+msgstr ""
+
+#: includes/class-movekit-job.php:75
+msgid "This job no longer exists."
+msgstr ""
+
+#. translators: 1: what MoveKit was doing, 2: PHP memory limit such as 128M.
+#: includes/class-movekit-job.php:187
+#, php-format
+msgid "The server ran out of memory while \"%1$s\" (PHP memory_limit is %2$s). Ask your host to raise memory_limit to at least 256M, then try again."
+msgstr ""
+
+#. translators: %s: what MoveKit was doing.
+#: includes/class-movekit-job.php:194
+#, php-format
+msgid "The server stopped MoveKit for taking too long while \"%s\". Ask your host to raise max_execution_time, then try again."
+msgstr ""
+
+#. translators: 1: what MoveKit was doing, 2: PHP error message.
+#: includes/class-movekit-job.php:200
+#, php-format
+msgid "A PHP error stopped MoveKit while \"%1$s\": %2$s"
+msgstr ""
+
+#: includes/class-movekit-job.php:285
+msgid "A paused push or pull is waiting on this site. Resume it or clean it up on the MoveKit screen first."
+msgstr ""
+
+#: includes/class-movekit-job.php:286
+msgid "Another MoveKit backup, restore or transfer is running on this site. Wait for it to finish, then try again."
+msgstr ""
+
+#. translators: 1: error message, 2: file name, 3: line number.
+#: includes/class-movekit-job.php:358
+#, php-format
+msgid "Unexpected error: %1$s (%2$s:%3$d)"
+msgstr ""
+
+#: includes/class-movekit-job.php:372
+msgid "Could not save job progress. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-parts.php:24
+msgid "Database"
+msgstr ""
+
+#: includes/class-movekit-parts.php:25
+msgid "Media"
+msgstr ""
+
+#: includes/class-movekit-parts.php:26
+msgid "Plugins"
+msgstr ""
+
+#: includes/class-movekit-parts.php:27
+msgid "Themes"
+msgstr ""
+
+#: includes/class-movekit-parts.php:28
+msgid "Other files"
+msgstr ""
+
+#: includes/class-movekit-parts.php:57
+msgid "Choose at least one thing to include: database, media, plugins, themes or other files."
+msgstr ""
+
+#: includes/class-movekit-remote-api.php:270
+msgid "Requested past the end of the backup."
+msgstr ""
+
+#: includes/class-movekit-remote-api.php:295
+#: includes/class-movekit-storage.php:196
+msgid "Could not save the upload. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:80
+msgid "The other site sent an unreadable file list."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:154
+msgid "A download from the other site was cut short."
+msgstr ""
+
+#. translators: 1: site address, 2: error.
+#: includes/class-movekit-remote-client.php:243
+#, php-format
+msgid "Could not reach %1$s: %2$s"
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-remote-client.php:269
+#, php-format
+msgid "%s redirected the request, so its address has probably changed. Copy a fresh connection key from it."
+msgstr ""
+
+#. translators: %s: error from the other site.
+#: includes/class-movekit-remote-client.php:281
+#: includes/class-movekit-remote-client.php:306
+#, php-format
+msgid "The other site said: %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-remote-client.php:292
+#, php-format
+msgid "A PHP error stopped WordPress on %s. Its PHP error log, or the email WordPress sent to its administrator, names the plugin or file at fault."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:300
+msgid "MoveKit is not active on the other site, or it is an older version. Install the same MoveKit version on both sites."
+msgstr ""
+
+#. translators: %d: HTTP status code.
+#: includes/class-movekit-remote-client.php:321
+#, php-format
+msgid "The other site returned an error (HTTP %d)."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:364
+msgid "In hPanel, open Websites, then Dashboard, Performance, CDN, Manage, and on the Security tab set the security level to Medium or Low. If that is not enough, disable the CDN while you transfer."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:368
+msgid "In Cloudflare, check Security, then Events, for the blocked request and add a rule that skips it."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:373
+msgid "In Wordfence on that site, check Tools, then Live Traffic, and allowlist the blocked request."
+msgstr ""
+
+#. translators: 1: site address, 2: HTTP status code.
+#: includes/class-movekit-remote-client.php:382
+#, php-format
+msgid "A firewall or security setting on %1$s blocked the request before it reached WordPress (HTTP %2$d)."
+msgstr ""
+
+#. translators: %s: name of a firewall or security service.
+#: includes/class-movekit-remote-client.php:388
+#, php-format
+msgid "It was blocked by %s."
+msgstr ""
+
+#: includes/class-movekit-remote-client.php:393
+msgid "Check the firewall or security plugin on that site, or ask the host to allow requests to /wp-json/movekit/."
+msgstr ""
+
+#. translators: %s: request ID from the firewall.
+#: includes/class-movekit-remote-client.php:397
+#, php-format
+msgid "Request ID for the host: %s"
+msgstr ""
+
+#: includes/class-movekit-rest.php:316
+msgid "Not allowed."
+msgstr ""
+
+#: includes/class-movekit-rest.php:410
+#: includes/class-movekit-transfer-job.php:118
+msgid "The other site is a multisite network, which is not supported yet."
+msgstr ""
+
+#. translators: 1: site address, 2: reason.
+#: includes/class-movekit-rest.php:415
+#: includes/class-movekit-transfer-job.php:122
+#, php-format
+msgid "%1$s is busy: %2$s"
+msgstr ""
+
+#: includes/class-movekit-rest.php:429
+msgid "This site asks search engines not to index it. The other site keeps its own setting if it is a live site."
+msgstr ""
+
+#: includes/class-movekit-rest.php:493
+msgid "Could not delete the file. Check folder permissions."
+msgstr ""
+
+#. translators: %d: PHP upload error code.
+#: includes/class-movekit-rest.php:523
+#, php-format
+msgid "A piece of the upload was rejected by the server (error %d)."
+msgstr ""
+
+#: includes/class-movekit-rest.php:583
+#: includes/class-movekit-transfer-job.php:115
+msgid "The two sites have incompatible MoveKit versions. Install the same version on both sites."
+msgstr ""
+
+#: includes/class-movekit-rest.php:656
+msgid "Only a push or pull can be resumed."
+msgstr ""
+
+#. translators: %s: folder path.
+#: includes/class-movekit-storage.php:54
+#: includes/class-movekit-undo.php:81
+#, php-format
+msgid "Could not create folder %s. Check that wp-content is writable."
+msgstr ""
+
+#: includes/class-movekit-storage.php:111
+msgid "Invalid backup name."
+msgstr ""
+
+#: includes/class-movekit-storage.php:156
+msgid "Could not save the upload."
+msgstr ""
+
+#: includes/class-movekit-storage.php:179
+msgid "Invalid upload."
+msgstr ""
+
+#: includes/class-movekit-storage.php:182
+#: assets/admin.js:802
+msgid "Choose a .movekit backup file."
+msgstr ""
+
+#: includes/class-movekit-storage.php:205
+msgid "The upload got mixed up. Please try again."
+msgstr ""
+
+#. translators: 1: space needed, 2: space free.
+#: includes/class-movekit-storage.php:277
+#, php-format
+msgid "Not enough disk space: this needs about %1$s free, but the server has %2$s. Delete old backups or ask your host for more space."
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-transfer-job.php:102
+#, php-format
+msgid "Connecting to %s"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:133
+#: includes/class-movekit-transfer-job.php:252
+msgid "Comparing files with the other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:146
+msgid "Backing up this site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:148
+msgid "Backing up the other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:170
+#: includes/class-movekit-transfer-job.php:206
+msgid "Sending backup to the other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:182
+msgid "The backup to send has disappeared."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:214
+msgid "Restoring on the other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:237
+#: includes/class-movekit-transfer-job.php:268
+msgid "Other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:283
+#: includes/class-movekit-transfer-job.php:319
+msgid "Downloading backup from the other site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:296
+msgid "Could not save the download. Check that wp-content is writable."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:316
+msgid "Saving the download failed. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:330
+msgid "Could not save the download."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:333
+msgid "Restoring on this site"
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:377
+#: assets/admin.js:536
+#: assets/admin.js:559
+msgid "Push complete."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:379
+msgid "Pull complete. Log in with the username and password from the site you pulled."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:380
+#: assets/admin.js:547
+#: assets/admin.js:575
+msgid "Pull complete."
+msgstr ""
+
+#. translators: 1: site address, 2: how long, e.g. "5 minutes".
+#: includes/class-movekit-transfer-job.php:402
+#, php-format
+msgid "Could not reach %1$s for %2$s, so the transfer was paused. Resume it when the connection is back, or clean up to remove the unfinished transfer from both sites."
+msgstr ""
+
+#. translators: %d: number of minutes.
+#: includes/class-movekit-transfer-job.php:405
+#, php-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-movekit-transfer-job.php:430
+msgid "This transfer cannot be resumed. Start it again."
+msgstr ""
+
+#: includes/class-movekit-transfer-job.php:435
+msgid "Resuming"
+msgstr ""
+
+#. translators: 1: site address, 2: error.
+#: includes/class-movekit-transfer-job.php:487
+#, php-format
+msgid "Could not clean up on %1$s (%2$s). Its unfinished files and tables are removed automatically after a day."
+msgstr ""
+
+#. translators: %s: file name.
+#: includes/class-movekit-transfer-job.php:521
+#, php-format
+msgid "Could not delete the temporary backup %s on the other site. You can delete it from its MoveKit screen."
+msgstr ""
+
+#. translators: %s: site address.
+#: includes/class-movekit-transfer-job.php:595
+#, php-format
+msgid "Lost the connection to %s. Waiting for it to come back."
+msgstr ""
+
+#. translators: %s: error from the other site.
+#: includes/class-movekit-transfer-job.php:627
+#, php-format
+msgid "The other site reported: %s"
+msgstr ""
+
+#. translators: 1: what is happening, 2: bytes done, 3: total bytes.
+#: includes/class-movekit-transfer-job.php:675
+#, php-format
+msgid "%1$s: %2$s of %3$s"
+msgstr ""
+
+#: includes/class-movekit-undo.php:168
+msgid "Could not save the undo information. The disk may be full."
+msgstr ""
+
+#: includes/class-movekit-undo.php:275
+msgid "There is no restore to undo. Undo is available for a day after a restore."
+msgstr ""
+
+#: assets/admin.js:32
+msgid "Lost connection to the site."
+msgstr ""
+
+#. translators: %d: HTTP status code.
+#: assets/admin.js:76
+#, js-format
+msgid "The server returned an error (%d)."
+msgstr ""
+
+#. translators: 1: error message, 2: seconds.
+#: assets/admin.js:107
+#, js-format
+msgid "%1$s Retrying in %2$d seconds…"
+msgstr ""
+
+#: assets/admin.js:156
+msgid "Select at least one item under What to include."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:167
+#, js-format
+msgid "This replaces the database and wp-content files of %s."
+msgstr ""
+
+#. translators: 1: site address, 2: list such as Database, Media.
+#: assets/admin.js:169
+#, js-format
+msgid "This replaces only these parts of %1$s: %2$s."
+msgstr ""
+
+#: assets/admin.js:191
+msgid "Starting…"
+msgstr ""
+
+#. translators: %d: percentage.
+#: assets/admin.js:207
+#, js-format
+msgid "%d%% done."
+msgstr ""
+
+#. translators: %d: number of warnings.
+#: assets/admin.js:241
+#, js-format
+msgid "Warnings (%d)"
+msgstr ""
+
+#: assets/admin.js:263
+msgid "Something went wrong."
+msgstr ""
+
+#. translators: %s: time left, such as 4:32.
+#: assets/admin.js:303
+#, js-format
+msgid "%s left before the transfer pauses."
+msgstr ""
+
+#. translators: %s: date and time.
+#: assets/admin.js:360
+#, js-format
+msgid "Not what you expected? After logging in, you can undo the restore on the MoveKit screen until %s."
+msgstr ""
+
+#: assets/admin.js:368
+msgid "Backup failed."
+msgstr ""
+
+#: assets/admin.js:374
+msgid "Backup complete."
+msgstr ""
+
+#. translators: 1: number of tables, 2: number of files.
+#: assets/admin.js:375
+#, js-format
+msgid "%1$d tables and %2$d files."
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:377
+#: assets/admin.js:906
+#, js-format
+msgid "Download %s"
+msgstr ""
+
+#: assets/admin.js:388
+msgid "Restore failed."
+msgstr ""
+
+#: assets/admin.js:399
+msgid "Log in with the username and password from the site you restored."
+msgstr ""
+
+#: assets/admin.js:400
+#: assets/admin.js:582
+#: assets/admin.js:992
+msgid "Log in"
+msgstr ""
+
+#: assets/admin.js:412
+msgid "Creating backup"
+msgstr ""
+
+#. translators: %s: list such as Database, Media.
+#: assets/admin.js:412
+#, js-format
+msgid "Creating backup of %s"
+msgstr ""
+
+#: assets/admin.js:434
+msgid "This can't go ahead:"
+msgstr ""
+
+#: assets/admin.js:455
+msgid "Please note:"
+msgstr ""
+
+#. translators: 1: file name, 2: source site address, 3: this site's address.
+#: assets/admin.js:475
+#, js-format
+msgid "Restore %1$s from %2$s over %3$s?"
+msgstr ""
+
+#: assets/admin.js:478
+msgid "Afterwards you log in with the username and password from the restored site."
+msgstr ""
+
+#: assets/admin.js:479
+msgid "This is a live site. Visitors see the restored site as soon as it finishes."
+msgstr ""
+
+#: assets/admin.js:483
+msgid "You can undo this restore for a day. The earlier restore can then no longer be undone."
+msgstr ""
+
+#: assets/admin.js:484
+msgid "You can undo this restore for a day."
+msgstr ""
+
+#: assets/admin.js:489
+msgid "Restoring backup"
+msgstr ""
+
+#: assets/admin.js:509
+msgid "The transfer failed."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:515
+#, js-format
+msgid "Uploads were not copied. Missing images are shown from %s."
+msgstr ""
+
+#. translators: %s: number of files.
+#: assets/admin.js:522
+#, js-format
+msgid "Left out %s file that was already the same on both sites."
+msgid_plural "Left out %s files that were already the same on both sites."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: site address.
+#: assets/admin.js:531
+#, js-format
+msgid "To put %s back as it was, use Undo on its MoveKit screen within a day."
+msgstr ""
+
+#. translators: 1: list such as Database, Media, 2: site address.
+#: assets/admin.js:537
+#, js-format
+msgid "Sent %1$s to %2$s."
+msgstr ""
+
+#. translators: 1: list such as Database, Media, 2: site address.
+#: assets/admin.js:548
+#, js-format
+msgid "Copied %1$s from %2$s."
+msgstr ""
+
+#. translators: 1: list such as Database, Media, 2: site address.
+#: assets/admin.js:562
+#, js-format
+msgid "Sent %1$s to %2$s. Log in there with this site's username and password."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:563
+#, js-format
+msgid "%s is now a copy of this site. Log in there with this site's username and password."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:567
+#, js-format
+msgid "Open %s"
+msgstr ""
+
+#. translators: 1: list such as Database, Media, 2: site address.
+#: assets/admin.js:578
+#, js-format
+msgid "Copied %1$s from %2$s. Log in with the username and password from that site."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:579
+#, js-format
+msgid "This site is now a copy of %s. Log in with the username and password from that site."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:611
+#, js-format
+msgid "Push this site to %s?"
+msgstr ""
+
+#. translators: 1: other site's address, 2: this site's address.
+#: assets/admin.js:612
+#, js-format
+msgid "Pull %1$s into %2$s?"
+msgstr ""
+
+#: assets/admin.js:616
+msgid "Each site keeps its own address."
+msgstr ""
+
+#: assets/admin.js:620
+msgid "Afterwards you log in there with this site's username and password."
+msgstr ""
+
+#: assets/admin.js:621
+msgid "Afterwards you log in with the username and password from the other site."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:626
+#, js-format
+msgid "%s is a live site. Visitors see this site's content there as soon as the push finishes."
+msgstr ""
+
+#: assets/admin.js:627
+msgid "This is a live site. Visitors see the pulled site as soon as it finishes."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:632
+#, js-format
+msgid "You can undo it for a day on the MoveKit screen of %s."
+msgstr ""
+
+#: assets/admin.js:633
+msgid "You can undo it for a day."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:638
+#, js-format
+msgid "Pushing to %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:638
+#, js-format
+msgid "Pulling from %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:654
+#, js-format
+msgid "Push to %s is paused."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:655
+#, js-format
+msgid "Pull from %s is paused."
+msgstr ""
+
+#: assets/admin.js:659
+msgid "Resume"
+msgstr ""
+
+#: assets/admin.js:661
+msgid "Clean up"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:672
+#: assets/admin.js:743
+#, js-format
+msgid "Resuming push to %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:673
+#: assets/admin.js:745
+#, js-format
+msgid "Resuming pull from %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:690
+#, js-format
+msgid "Clean up the unfinished transfer? This deletes its temporary backup files and unfinished database tables on this site and on %s. Neither site's content is changed."
+msgstr ""
+
+#: assets/admin.js:700
+msgid "Cleaned up."
+msgstr ""
+
+#. translators: %d: percentage.
+#: assets/admin.js:719
+#, js-format
+msgid "It stopped at %d%% because the connection was lost."
+msgstr ""
+
+#: assets/admin.js:741
+msgid "Resuming restore"
+msgstr ""
+
+#: assets/admin.js:747
+msgid "Resuming backup"
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:806
+#, js-format
+msgid "Uploading %s"
+msgstr ""
+
+#. translators: 1: amount sent, 2: total size.
+#: assets/admin.js:828
+#, js-format
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: assets/admin.js:842
+msgid "Upload complete."
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:843
+#, js-format
+msgid "%s is ready to restore."
+msgstr ""
+
+#: assets/admin.js:874
+msgid "No backups yet."
+msgstr ""
+
+#: assets/admin.js:893
+msgid "Incomplete or damaged"
+msgstr ""
+
+#: assets/admin.js:905
+msgid "Download"
+msgstr ""
+
+#: assets/admin.js:907
+msgid "Restore"
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:908
+#, js-format
+msgid "Restore %s"
+msgstr ""
+
+#: assets/admin.js:916
+msgid "Delete"
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:917
+#, js-format
+msgid "Delete %s"
+msgstr ""
+
+#. translators: %s: file name.
+#: assets/admin.js:919
+#, js-format
+msgid "Delete %s? This cannot be undone."
+msgstr ""
+
+#. translators: %s: date and time.
+#: assets/admin.js:955
+#, js-format
+msgid "The last restore can be undone until %s."
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:957
+#, js-format
+msgid "It replaced this site with a copy of %s. Undo puts back what this site had before."
+msgstr ""
+
+#: assets/admin.js:959
+msgid "Undo restore"
+msgstr ""
+
+#: assets/admin.js:961
+msgid "Keep the restore"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:977
+#, js-format
+msgid "Undo the restore of %s? This puts back the database and files this site had before it, and removes the files the restore added."
+msgstr ""
+
+#: assets/admin.js:983
+msgid "Undoing the restore"
+msgstr ""
+
+#: assets/admin.js:988
+msgid "The restore was undone."
+msgstr ""
+
+#: assets/admin.js:991
+msgid "Log in with the username and password this site had before the restore."
+msgstr ""
+
+#. translators: %d: number of files.
+#: assets/admin.js:998
+#, js-format
+msgid "%d file could not be put back. Check the folder permissions in wp-content."
+msgid_plural "%d files could not be put back. Check the folder permissions in wp-content."
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/admin.js:1010
+msgid "Keep the restored site? The copy of what it replaced is deleted, and the restore can no longer be undone."
+msgstr ""
+
+#: assets/admin.js:1016
+msgid "The restore was kept."
+msgstr ""
+
+#: assets/admin.js:1038
+msgid "No connected sites yet. Paste a key above to connect one."
+msgstr ""
+
+#: assets/admin.js:1051
+msgid "Pull"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:1052
+#, js-format
+msgid "Replace this site with %s"
+msgstr ""
+
+#: assets/admin.js:1057
+msgid "Push"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:1058
+#, js-format
+msgid "Replace %s with this site"
+msgstr ""
+
+#: assets/admin.js:1063
+msgid "Disconnect"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:1064
+#, js-format
+msgid "Disconnect %s"
+msgstr ""
+
+#. translators: %s: site address.
+#: assets/admin.js:1066
+#, js-format
+msgid "Disconnect %s? You can connect it again with its key."
+msgstr ""
+
+#: assets/admin.js:1099
+msgid "Connected. You can now push to or pull from that site."
+msgstr ""
+
+#: assets/admin.js:1103
+msgid "Could not connect."
+msgstr ""
+
+#: assets/admin.js:1114
+msgid "Copied"
+msgstr ""
+
+#: assets/admin.js:1140
+msgid "Hide"
+msgstr ""
+
+#: assets/admin.js:1144
+msgid "Create a new key? Sites connected with the current key stop working until you paste the new key into them."
+msgstr ""
+
+#: assets/admin.js:1150
+msgid "New key created. Paste it into the sites that connect to this one."
+msgstr ""
+
+#. translators: %s: list such as Database, Media.
+#: assets/admin.js:1173
+#, js-format
+msgid "Back up %s"
+msgstr ""
