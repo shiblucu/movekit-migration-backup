@@ -4,7 +4,7 @@ Tags: migration, backup, restore, clone, move
 Requires at least: 5.6
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 0.10.2
+Stable tag: 0.10.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -177,6 +177,9 @@ MoveKit verifies HTTPS certificates. For local sites with self-signed certificat
 5. A finished push, with a link to the other site and how to undo it.
 
 == Changelog ==
+
+= 0.10.3 =
+* Fixed restores on hosts that refuse to create files such as `index.php` in MoveKit's holding folder (seen on Hostinger). Restored files are now held under neutral names until they are moved into place, and a failed write now says why.
 
 = 0.10.2 =
 * "Show missing media from the other site" is now off unless you tick it, because it makes visitors' browsers load images from the other site. The privacy answer and a link to the source code are in the readme.

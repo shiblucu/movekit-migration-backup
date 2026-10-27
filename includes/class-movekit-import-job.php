@@ -639,13 +639,11 @@ class MoveKit_Import_Job extends MoveKit_Job {
 			if ( MoveKit_File_Scanner::is_excluded( $rel, $excluded ) ) {
 				continue;
 			}
-			$path = $root . '/' . $rel;
 			if ( MoveKit_Archive::TYPE_DIR === $rec['type'] ) {
-				wp_mkdir_p( $path );
 				$this->staged( 'D', $rel );
 				continue;
 			}
-			if ( $this->write_chunk( $path, $rec ) ) {
+			if ( $this->write_chunk( $root . '/' . self::stage_name( $rel ), $rel, $rec ) ) {
 				$this->staged( 'F', $rel );
 			}
 		}
@@ -663,6 +661,20 @@ class MoveKit_Import_Job extends MoveKit_Job {
 	 */
 	private function stage_dir() {
 		return $this->dir() . '/stage';
+	}
+
+	/**
+	 * Name of a file inside the staging folder. It does not contain the real
+	 * name: some hosts (Hostinger, WP Engine) refuse to create files whose
+	 * names contain ".php" in places where PHP files do not belong, and a
+	 * hash keeps any path length or odd character from mattering.
+	 *
+	 * @param string $rel Path relative to wp-content.
+	 * @return string Path relative to the staging folder.
+	 */
+	public static function stage_name( $rel ) {
+		$hash = sha1( $rel );
+		return substr( $hash, 0, 2 ) . '/' . $hash . '.movekit-part';
 	}
 
 	/**
@@ -716,7 +728,11 @@ class MoveKit_Import_Job extends MoveKit_Job {
 					}
 					continue;
 				}
-				$from = $stage . '/' . $rel . '.movekit-part';
+				$from = $stage . '/' . self::stage_name( $rel );
+				if ( ! file_exists( $from ) ) {
+					// Staged by an earlier version, under the file's own name.
+					$from = $stage . '/' . $rel . '.movekit-part';
+				}
 				if ( ! file_exists( $from ) ) {
 					continue;
 				}
@@ -760,20 +776,22 @@ class MoveKit_Import_Job extends MoveKit_Job {
 	/**
 	 * Write one record's data into its .movekit-part file in the staging folder.
 	 *
+	 * @param string $part Where to write it, inside the staging folder.
+	 * @param string $path Its real path relative to wp-content, for messages.
+	 * @param array  $rec  Archive record.
 	 * @return bool Whether the file is complete.
 	 */
-	private function write_chunk( $path, array $rec ) {
-		$part = $path . '.movekit-part';
+	private function write_chunk( $part, $path, array $rec ) {
 		if ( 0 === $rec['offset'] ) {
-			if ( ! is_dir( dirname( $path ) ) && ! wp_mkdir_p( dirname( $path ) ) ) {
-				throw new MoveKit_Exception( esc_html( sprintf( /* translators: %s: folder path. */ __( 'Could not create folder %s', 'movekit-migration-backup' ), dirname( $path ) ) ) );
+			if ( ! is_dir( dirname( $part ) ) && ! wp_mkdir_p( dirname( $part ) ) ) {
+				throw new MoveKit_Exception( esc_html( sprintf( /* translators: %s: folder path. */ __( 'Could not create folder %s', 'movekit-migration-backup' ), dirname( $part ) ) . self::last_error() ) );
 			}
 			$fh = @fopen( $part, 'wb' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- The result is checked below.
 		} else {
 			$fh = @fopen( $part, 'cb' ); // phpcs:ignore WordPress.PHP.NoSilencedErrors.Discouraged -- The result is checked below.
 		}
 		if ( ! $fh ) {
-			throw new MoveKit_Exception( esc_html( sprintf( /* translators: %s: file path. */ __( 'Could not write %s. Check folder permissions.', 'movekit-migration-backup' ), $path ) ) );
+			throw new MoveKit_Exception( esc_html( sprintf( /* translators: %s: file path. */ __( 'Could not write %s into the holding folder. Check folder permissions.', 'movekit-migration-backup' ), $path ) . self::last_error() ) );
 		}
 		fseek( $fh, $rec['offset'] );
 		if ( fwrite( $fh, $rec['data'] ) !== strlen( $rec['data'] ) ) {

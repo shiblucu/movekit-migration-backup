@@ -2,14 +2,14 @@
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: MoveKit – Site Migration & Backup 0.10.2\n"
+"Project-Id-Version: MoveKit – Site Migration & Backup 0.10.3\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/movekit-migration-backup\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-10-26T17:36:49+00:00\n"
+"POT-Creation-Date: 2026-10-27T05:09:41+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: movekit-migration-backup\n"
@@ -600,31 +600,31 @@ msgstr ""
 msgid "Skipped unsafe path in backup: %s"
 msgstr ""
 
-#: includes/class-movekit-import-job.php:656
+#: includes/class-movekit-import-job.php:654
 msgid "Switching to the restored site"
 msgstr ""
 
-#: includes/class-movekit-import-job.php:677
+#: includes/class-movekit-import-job.php:689
 #: includes/class-movekit-undo.php:181
 msgid "Could not record restored files. The disk may be full."
 msgstr ""
 
 #. translators: %s: folder path.
-#: includes/class-movekit-import-job.php:724
-#: includes/class-movekit-import-job.php:769
+#: includes/class-movekit-import-job.php:740
+#: includes/class-movekit-import-job.php:787
 #, php-format
 msgid "Could not create folder %s"
 msgstr ""
 
 #. translators: %s: file path.
-#: includes/class-movekit-import-job.php:730
-#: includes/class-movekit-import-job.php:736
+#: includes/class-movekit-import-job.php:746
+#: includes/class-movekit-import-job.php:752
 #, php-format
 msgid "Could not replace %s. Check folder permissions."
 msgstr ""
 
 #. translators: %d: number of files.
-#: includes/class-movekit-import-job.php:756
+#: includes/class-movekit-import-job.php:772
 #, php-format
 msgid "%d replaced file could not be put back. It is in the movekit-backups folder."
 msgid_plural "%d replaced files could not be put back. They are in the movekit-backups folder."
@@ -632,28 +632,28 @@ msgstr[0] ""
 msgstr[1] ""
 
 #. translators: %s: file path.
-#: includes/class-movekit-import-job.php:776
+#: includes/class-movekit-import-job.php:794
 #, php-format
-msgid "Could not write %s. Check folder permissions."
+msgid "Could not write %s into the holding folder. Check folder permissions."
 msgstr ""
 
 #. translators: %s: file path.
-#: includes/class-movekit-import-job.php:781
+#: includes/class-movekit-import-job.php:799
 #, php-format
 msgid "Writing %s failed. The disk may be full."
 msgstr ""
 
 #. translators: 1: constraint name, 2: table name.
-#: includes/class-movekit-import-job.php:959
+#: includes/class-movekit-import-job.php:977
 #, php-format
 msgid "The foreign key %1$s on table %2$s kept a temporary name. The site works the same."
 msgstr ""
 
-#: includes/class-movekit-import-job.php:1038
+#: includes/class-movekit-import-job.php:1056
 msgid "Restore complete. Log in with the username and password from the site you restored."
 msgstr ""
 
-#: includes/class-movekit-import-job.php:1039
+#: includes/class-movekit-import-job.php:1057
 #: assets/admin.js:393
 #: assets/admin.js:398
 msgid "Restore complete."
